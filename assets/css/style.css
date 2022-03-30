@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  border: 1px solid #dfe4f0;
+}
+
+.container-xl {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+
+.nav-link a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #9ba1af;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.nav-link a:hover {
+  color: #0c145a;
+}
+
+.nav-link a.active {
+  color: #0c145a;
+}
+
+.btn-login,
+.btn-get,
+.btn-buynow {
+  transition: all 0.5s ease;
+  color: #fff !important;
+  border: 3px solid #3eb051;
+  text-align: center;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #3eb051;
+  padding: 10px 30px;
+  outline: none;
+  border-radius: 25px;
+}
+
+.btn-login:hover,
+.btn-get:hover,
+.btn-buynow:hover {
+  color: #3eb051 !important;
+  background-color: transparent;
+}
+
+/* main banner */
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.jumbotron-text {
+  width: 40%;
+  font-weight: 500;
+}
+
+.jumbotron-text p {
+  margin: 15px 0 25px;
+  font-size: 18px;
+  color: #9ba1af;
+}
+.jumbotron-text a {
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.jumbotron img {
+  width: 600px;
+  border-radius: 30px;
+}
+
+.jumbotron-text h1 {
+  font-family: "Poppins", sans-serif;
+  color: #33017a;
+  font-size: 40px;
+}
+
+.main-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #0c145a;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.card-products {
+  display: flex;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  padding-left: 30px;
+}
+
+.card {
+  display: flex;
+  width: 20%;
+  box-shadow: 0 6px 12px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 20px;
+}
+
+.card-body {
+  margin-left: 20px;
+}
+
+.card a {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  color: #0c145a;
+}
+
+/* buy now */
+.wrapper-buynow {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.buynow-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+  justify-content: center;
+}
+
+.buynow-img img {
+  width: 500px;
+  border-radius: 40px;
+}
+
+.buynow-text h1 {
+  font-family: "Poppins", sans-serif;
+  color: #33017a;
+  font-size: 35px;
+}
+
+.buynow-text p {
+  margin: 15px 0 25px;
+  font-size: 18px;
+  color: #9ba1af;
+}
+
+.buynow-text a {
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 70px;
+  padding-top: 40px;
+}
+
+footer a,
+footer span {
+  text-decoration: none;
+  display: block;
+  color: #9ba1af;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+footer h4 {
+  font-size: 20px;
+  color: #0c145a;
+  font-family: "poppins", sans-serif;
+}
+
+.footer-img img {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+footer a:hover {
+  color: #0c145a;
+}
+
+/* login & Register */
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 30px auto;
+  box-shadow: 0 6px 12px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.form-login h3 {
+  color: #33017a;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(148, 148, 148);
+}
+
+.btn-signin {
+  transition: all 0.5s ease;
+  color: #fff !important;
+  border: 3px solid #3eb051;
+  text-align: center;
+  line-height: 1;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #3eb051;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border-radius: 25px;
+}
+
+.btn-signin:hover {
+  color: #3eb051 !important;
+  background-color: transparent;
+}
+
+.register,
+.login {
+  font-size: 15px;
+  color: #33017a;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.register:hover,
+.login:hover {
+  color: #cfadff;
+}

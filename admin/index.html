@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="myFunction()">
     <div class="container">
       <div class="sidebar">
         <a href="index.html" class="active">Home</a>
@@ -27,12 +27,31 @@
           <button class="btn-logout">Logout</button>
         </div>
         <div class="content">
-          <h2>Selamat Datang, Admin!</h2>
+          <h2 id="text">Selamat Datang, Admin!</h2>
         </div>
       </div>
     </div>
     <div class="footer">
       <p>&copy; 2022 GetCrypto. All rights reserved.</p>
     </div>
+    <script>
+      function myFunction() {
+        let nama = prompt("Masukkan Nama Anda : ", "Admin");
+
+        let jam = new Date().getHours();
+
+        if (nama != null) {
+          if (jam >= 4 && jam <= 10) {
+            document.getElementById("text").innerHTML = `Selamat Pagi ${nama}`;
+          } else if (jam >= 11 && jam <= 14) {
+            document.getElementById("text").innerHTML = `Selamat Siang ${nama}`;
+          } else if (jam >= 15 && jam <= 18) {
+            document.getElementById("text").innerHTML = `Selamat Sore ${nama}`;
+          } else {
+            document.getElementById("text").innerHTML = `Selamat Malam ${nama}`;
+          }
+        }
+      }
+    </script>
   </body>
 </html>

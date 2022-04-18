@@ -16,9 +16,9 @@
   <body onload="myFunction()">
     <div class="container">
       <div class="sidebar">
-        <a href="index.html" class="active">Home</a>
-        <a href="crypto/index.html">Crypto</a>
-        <a href="transaction/index.html">Transaction</a>
+        <a href="/admin" class="active">Home</a>
+        <a href="/admin/crypto">Crypto</a>
+        <a href="/admin/transaction">Transaction</a>
       </div>
 
       <div class="right_content">
@@ -26,7 +26,7 @@
           <img src="../assets/images/logo.png" alt="GetCrypto Logo" />
           <button class="btn-logout">Logout</button>
         </div>
-        <div class="content">
+        <div class="content-dashboard">
           <h2 id="text">Selamat Datang, Admin!</h2>
           <h3 id="date"></h3>
         </div>

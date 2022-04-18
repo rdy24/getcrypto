@@ -33,7 +33,6 @@ function myFunction() {
     document.getElementById("text").innerHTML = "Selamat Malam Admin";
   }
 
-  let h = date.getHours();
   let m = date.getMinutes();
   let s = date.getSeconds();
   m = checkTime(m);

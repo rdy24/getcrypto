@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GetCrypto | Crypto Item</title>
+    <title>GetCrypto | Tambah Crypto</title>
     <link rel="stylesheet" href="../../assets/css/admin.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +16,9 @@
   <body>
     <div class="container">
       <div class="sidebar">
-        <a href="../index.html">Home</a>
-        <a href="crypto/index.html">Crypto</a>
-        <a href="index.html" class="active">Transaction</a>
+        <a href="/admin">Home</a>
+        <a href="/admin/crypto" class="active">Crypto</a>
+        <a href="/admin/transaction">Transaction</a>
       </div>
 
       <div class="right_content">
@@ -27,18 +27,9 @@
           <button class="btn-logout">Logout</button>
         </div>
         <div class="content">
-          <h3>Input Transaction</h3>
+          <h3>Tambah Crypto Item</h3>
           <div class="form-tambah">
-            <form action="">
-              <label for="nama">Nama</label>
-              <input
-                class="input"
-                type="text"
-                name="nama"
-                id="nama"
-                placeholder="Nama"
-              />
-
+            <form action="crypto-proses.php" method="POST" enctype="multipart/form-data">
               <label for="crypto">Crypto</label>
               <input
                 class="input"
@@ -48,21 +39,21 @@
                 placeholder="Crypto"
               />
 
-              <label for="harga">Harga</label>
+              <label for="price">Price</label>
               <input
                 class="input"
                 type="text"
-                name="harga"
-                id="harga"
-                placeholder="Harga"
+                name="price"
+                id="price"
+                placeholder="Price"
               />
 
-              <label for="tgl">Tanggal</label>
+              <label for="photo">Photo</label>
               <input
-                class="input"
-                type="date"
-                name="tgl"
-                id="tgl"
+                type="file"
+                class="input-file"
+                name="photo"
+                id="photo"
                 style="margin-bottom: 20px"
               />
 

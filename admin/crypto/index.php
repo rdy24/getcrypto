@@ -16,9 +16,9 @@
   <body>
     <div class="container">
       <div class="sidebar">
-        <a href="../index.html">Home</a>
-        <a href="crypto/index.html">Crypto</a>
-        <a href="index.html" class="active">Transaction</a>
+        <a href="/admin">Home</a>
+        <a href="/admin/crypto" class="active">Crypto</a>
+        <a href="/admin/transaction">Transaction</a>
       </div>
 
       <div class="right_content">
@@ -27,26 +27,24 @@
           <button class="btn-logout">Logout</button>
         </div>
         <div class="content">
-          <h3>Transaction</h3>
+          <h3>Crypto Item</h3>
           <button type="button" class="btn btn-tambah">
-            <a href="create.html">Tambah Data</a>
+            <a href="create.php">Tambah Data</a>
           </button>
           <table class="table-data">
             <thead>
               <tr>
-                <th>Nama</th>
-                <th>Crypto Item</th>
-                <th>Harga</th>
-                <th>Tanggal</th>
+                <th>Photo</th>
+                <th>Item</th>
+                <th>Price</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Steve</td>
+                <td><img src="../../assets/images/bnb.svg" alt="" /></td>
                 <td>BNB</td>
                 <td>Rp. 555.000.000</td>
-                <td>02-03-2022</td>
                 <td><a href="">Edit</a> | <a href="">Hapus</a></td>
               </tr>
             </tbody>

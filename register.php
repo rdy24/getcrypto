@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap"
       rel="stylesheet"
     />
-    <title>GetCrypto | Login</title>
+    <title>GetCrypto | Register</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -22,16 +22,23 @@
       <nav class="navbar">
         <img src="assets/images/logo.png" alt="GetCrypto Logo" />
         <div class="nav-link">
-          <a href="index.html" class="active">Home</a>
-          <a href="products.html">Products</a>
+          <a href="index.php" class="active">Home</a>
+          <a href="products.php">Products</a>
           <a href="">Contact Us</a>
           <a href="">Blog</a>
-          <a href="login.html" class="btn-login">Sign In</a>
+          <a href="login.php" class="btn-login">Sign In</a>
         </div>
       </nav>
       <div class="form-login">
-        <h3>Login</h3>
+        <h3>Register</h3>
         <form action="">
+          <input
+            class="input"
+            type="text"
+            name="username"
+            placeholder="Username"
+          />
+          <input class="input" type="text" name="name" placeholder="Name" />
           <input class="input" type="text" name="email" placeholder="Email" />
           <input
             class="input"
@@ -43,7 +50,7 @@
             Login
           </button>
         </form>
-        <a href="register.html" class="register">Register Here</a>
+        <a href="login.php" class="login">Login Now</a>
       </div>
     </div>
     <hr />

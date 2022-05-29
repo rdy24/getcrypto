@@ -31,7 +31,7 @@
       </nav>
       <div class="form-login">
         <h3>Register</h3>
-        <form action="">
+        <form action="register-proses.php" method="POST">
           <input
             class="input"
             type="text"
@@ -46,8 +46,8 @@
             name="password"
             placeholder="Password"
           />
-          <button type="submit" class="btn-signin" name="login" id="login">
-            Login
+          <button type="submit" class="btn-signin" name="register" id="register">
+            Register
           </button>
         </form>
         <a href="login.php" class="login">Login Now</a>

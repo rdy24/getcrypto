@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body onload="myFunction()">
+  <body>
     <div class="container">
       <div class="sidebar">
         <a href="/admin" class="active">Home</a>
@@ -24,10 +24,17 @@
       <div class="right_content">
         <div class="navbar">
           <img src="../assets/images/logo.png" alt="GetCrypto Logo" />
-          <button class="btn-logout">Logout</button>
+          <button class="btn-logout">
+            <a href="../logout.php">Logout</a>
+          </button>
         </div>
         <div class="content-dashboard">
-          <h2 id="text">Selamat Datang, Admin!</h2>
+          <h2 id="text">
+          <?php 
+            session_start();
+            echo $_SESSION['nama'];
+          ?>
+          </h2>
           <h3 id="date"></h3>
         </div>
       </div>
@@ -35,6 +42,66 @@
     <div class="footer">
       <p>&copy; 2022 GetCrypto. All rights reserved.</p>
     </div>
-    <script src="../assets/js/script.js"></script>
+    <script>
+    function myFunction() {
+      const months = [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember",
+      ];
+      const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+
+      let date = new Date();
+
+      jam = date.getHours();
+      tanggal = date.getDate();
+      hari = days[date.getDay()];
+      bulan = months[date.getMonth()];
+      tahun = date.getFullYear();
+
+
+      let m = date.getMinutes();
+      let s = date.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+
+      document.getElementById(
+        "date"
+      ).innerHTML = `${hari}, ${tanggal} ${bulan} ${tahun}, ${jam}:${m}:${s}`;
+      setTimeout(myFunction, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+
+    window.onload = function () {
+      let date = new Date();
+
+      jam = date.getHours();
+      if (jam >= 4 && jam <= 10) {
+        document.getElementById("text").insertAdjacentText("afterbegin", "Selamat Pagi,");
+      } else if (jam >= 11 && jam <= 14) {
+        document.getElementById("text").insertAdjacentText("afterbegin", "Selamat Siang,");
+      } else if (jam >= 15 && jam <= 18) {
+        document.getElementById("text").insertAdjacentText("afterbegin", "Selamat Sore,");
+      } else {
+        document.getElementById("text").insertAdjacentText("afterbegin", "Selamat Malam,");
+      }
+      myFunction();
+    };
+    </script>
   </body>
 </html>

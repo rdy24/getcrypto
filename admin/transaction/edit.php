@@ -1,3 +1,21 @@
+<?php 
+  include '../../koneksi.php';
+  $id = $_GET['id'];
+  if(!isset($_GET['id'])) {
+    echo "
+      <script>
+        alert('Tidak ada ID yang Terdeteksi');
+        window.location = 'transaction.php';
+      </script>
+    ";
+  }
+
+  $sql = "SELECT * FROM tb_transaction WHERE id = '$id'";
+  $result = mysqli_query($koneksi, $sql);
+  $data = mysqli_fetch_assoc($result);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,6 +48,7 @@
           <h3>Input Transaction</h3>
           <div class="form-tambah">
             <form action="transaction-proses.php" method="POST">
+              <input type="hidden" name="id" value="<?= $data['id'] ?>">
               <label for="nama">Nama</label>
               <input
                 class="input"
@@ -37,6 +56,7 @@
                 name="nama"
                 id="nama"
                 placeholder="Nama"
+                value="<?= $data['nama_admin'] ?>"
               />
 
               <label for="crypto">Crypto</label>
@@ -46,6 +66,7 @@
                 name="crypto"
                 id="crypto"
                 placeholder="Crypto"
+                value="<?= $data['crypto_item'] ?>"
               />
 
               <label for="harga">Harga</label>
@@ -55,6 +76,7 @@
                 name="harga"
                 id="harga"
                 placeholder="Harga"
+                value="<?= $data['harga'] ?>"
               />
 
               <label for="tanggal">Tanggal</label>
@@ -64,10 +86,11 @@
                 name="tanggal"
                 id="tanggal"
                 style="margin-bottom: 20px"
+                value="<?= $data['tanggal'] ?>"
               />
 
-              <button type="submit" class="btn btn-simpan" name="simpan">
-                Simpan
+              <button type="submit" class="btn btn-simpan" name="edit">
+                Edit
               </button>
             </form>
           </div>

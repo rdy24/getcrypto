@@ -31,7 +31,7 @@
       </nav>
       <div class="form-login">
         <h3>Login</h3>
-        <form action="">
+        <form action="login-proses.php" method="Post">
           <input class="input" type="text" name="email" placeholder="Email" />
           <input
             class="input"

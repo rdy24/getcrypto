@@ -42,13 +42,23 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Steve</td>
-                <td>BNB</td>
-                <td>Rp. 555.000.000</td>
-                <td>02-03-2022</td>
-                <td><a href="">Edit</a> | <a href="">Hapus</a></td>
-              </tr>
+              <?php 
+                include '../../koneksi.php';
+                $sql = "SELECT * FROM tb_transaction";
+                $result = mysqli_query($koneksi, $sql);
+                while($data = mysqli_fetch_assoc($result)) {
+                  echo "
+                  <tr>
+                    <td>$data[nama_admin]</td>
+                    <td>$data[crypto_item]</td>
+                    <td>$data[harga]</td>
+                    <td>$data[tanggal]</td>
+                    <td><a href=edit.php?id=$data[id]>Edit</a> | 
+                    <a href=delete.php?id=$data[id]>Hapus</a></td>
+                  </tr>
+                  ";
+                }
+              ?>
             </tbody>
           </table>
         </div>

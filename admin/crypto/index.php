@@ -24,29 +24,48 @@
       <div class="right_content">
         <div class="navbar">
           <img src="../../assets/images/logo.png" alt="GetCrypto Logo" />
-          <button class="btn-logout">Logout</button>
+          <button class="btn-logout">
+            <a href="../../logout.php">Logout</a>
+          </button>
         </div>
         <div class="content">
           <h3>Crypto Item</h3>
           <button type="button" class="btn btn-tambah">
             <a href="create.php">Tambah Data</a>
           </button>
+          <button type="button" class="btn">
+            <a href="crypto-cetak.php">Cetak</a>
+          </button>
           <table class="table-data">
             <thead>
               <tr>
-                <th>Photo</th>
                 <th>Item</th>
+                <th>Photo</th>
                 <th>Price</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><img src="../../assets/images/bnb.svg" alt="" /></td>
-                <td>BNB</td>
-                <td>Rp. 555.000.000</td>
-                <td><a href="">Edit</a> | <a href="">Hapus</a></td>
-              </tr>
+              <?php 
+                include '../../koneksi.php';
+                $sql = "SELECT * FROM tb_crypto";
+                $result = mysqli_query($koneksi, $sql);
+                while($data = mysqli_fetch_assoc($result)) {
+                  echo "
+                    <tr>
+                      <td>
+                        <img src='../../img_crypto/$data[image]' width='300px'>
+                      </td>
+                      <td>$data[name]</td>
+                      <td>$data[price]</td>
+                      <td>
+                        <a href=edit.php?id=$data[id]>Edit</a> | 
+                        <a href=delete.php?id=$data[id]>Hapus</a>
+                      </td>
+                    </tr>
+                  ";
+                }
+              ?>
             </tbody>
           </table>
         </div>

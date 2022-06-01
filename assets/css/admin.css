@@ -60,7 +60,7 @@ body {
 
 .btn-logout {
   transition: all 0.5s ease;
-  color: #fff !important;
+  color: #fff;
   border: 3px solid #3eb051;
   text-align: center;
   line-height: 1;
@@ -73,7 +73,7 @@ body {
 }
 
 .btn-logout a {
-  color: #fff !important;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -116,6 +116,7 @@ body {
   border-top-right-radius: 10px;
   padding: 20px;
   overflow: auto;
+  height: 510px;
 }
 
 .content-dashboard {
@@ -126,6 +127,8 @@ body {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  height: 510px;
+  overflow: auto;
 }
 
 /* style for table */
@@ -137,7 +140,7 @@ body {
 }
 
 .table-data img {
-  width: 50px;
+  width: 250px;
 }
 
 th,
@@ -185,4 +188,5 @@ td {
   font-weight: bold;
   padding: 15px;
   font-family: "Ubuntu", sans-serif;
+  flex-basis: auto;
 }

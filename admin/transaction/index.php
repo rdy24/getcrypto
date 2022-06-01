@@ -24,7 +24,9 @@
       <div class="right_content">
         <div class="navbar">
           <img src="../../assets/images/logo.png" alt="GetCrypto Logo" />
-          <button class="btn-logout">Logout</button>
+          <button class="btn-logout">
+            <a href="../../logout.php">Logout</a>
+          </button>
         </div>
         <div class="content">
           <h3>Transaction</h3>

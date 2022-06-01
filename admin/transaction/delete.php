@@ -65,5 +65,8 @@
         </div>
       </div>
     </div>
+    <div class="footer">
+      <p>&copy; 2022 GetCrypto. All rights reserved.</p>
+    </div>
   </body>
 </html>
